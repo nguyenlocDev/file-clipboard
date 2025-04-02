@@ -1,0 +1,43 @@
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  padding: 2rem 0;
+}
+/* Fade effects */
+
+.marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.extension-badge {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
