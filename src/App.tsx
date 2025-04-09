@@ -6,12 +6,26 @@ import { useEffect } from "react";
 import { getAuthToken } from "./lib/api";
 import NotFound from "./page/notfoud";
 
+// Import AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./modules/css/aos-custom.css";
+
 function App() {
   const getUser = async () => {
     const authToken = await getAuthToken();
     localStorage.setItem("authToken", authToken);
   };
+
   useEffect(() => {
+    // Khởi tạo AOS
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: false,
+      mirror: false,
+    });
+
     const authToken = localStorage.getItem("authToken") as string;
     if (!authToken) {
       getUser();

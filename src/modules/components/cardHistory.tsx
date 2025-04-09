@@ -102,7 +102,7 @@ export function FileHistory({
   };
 
   return (
-    <div className="w-full border rounded-lg shadow-sm bg-white">
+    <div className=" container mx-auto w-full border rounded-lg shadow-sm bg-white">
       <div className="p-4 flex items-center justify-between border-b">
         <div className="flex items-center gap-2">
           <span className="text-sm text-muted-foreground">Shared by You</span>
@@ -114,8 +114,8 @@ export function FileHistory({
 
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl font-semibold">
+          <div className="flex items-center gap-2 overflow-hidden">
+            <h2 className="text-xl font-semibold w-[200px] truncate text-end ">
               {files[0]?.name || "Uploaded Files"}
             </h2>
             <Button variant="ghost" size="icon" className="h-6 w-6">

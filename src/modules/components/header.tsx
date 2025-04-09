@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Menu, Sheet } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import FileExtensionMarquee from "./logoMarquen";
 

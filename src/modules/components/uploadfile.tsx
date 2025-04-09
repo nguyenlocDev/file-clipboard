@@ -211,7 +211,7 @@ export function FileUploader({
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full container mx-auto">
       <input
         type="file"
         ref={fileInputRef}
@@ -222,7 +222,7 @@ export function FileUploader({
 
       <div
         className={`
-          border-2 border-dashed rounded-lg p-6 transition-colors ${
+          border-2 border-dashed md:h-[400px] flex flex-col justify-center items-center rounded-lg p-6 transition-colors ${
             !isUploading ? "cursor-pointer" : ""
           }
           ${isDragging ? "border-primary bg-primary/5" : "border-border "}
@@ -241,10 +241,8 @@ export function FileUploader({
               <Plus className="h-6 w-6 text-primary" />
             </div>
             <div className="text-center">
-              <p className="text-sm font-medium">Drag and Drop file here</p>
-              <p className="text-xs text-muted-foreground mt-1">
-                Or click to select a file
-              </p>
+              <p className="text-sm font-medium">kéo hoặc thả file vào đây</p>
+              <p className="text-xs text-muted-foreground mt-1">chọn file</p>
             </div>
           </div>
         ) : (
